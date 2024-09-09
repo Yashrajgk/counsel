@@ -1,5 +1,11 @@
+import { Header } from "@/app/components/marketing/header";
+
 function HomePage() {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default HomePage;
