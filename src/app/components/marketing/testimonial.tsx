@@ -2,7 +2,7 @@
 
 const testimonials = [
   { name: "Alice", message: "This service is fantastic!", image: "/images/alice.jpg" },
-  { name: "Bob", message: "I love the user experience.", image: "/images/bob.jpg" },
+  { name: "Bob", message: "I love the user experience.", image: "/images/bob.jpg" }, 
   { name: "Charlie", message: "Highly recommended!", image: "/images/charlie.jpg" },
   { name: "Dave", message: "A game changer for our team!", image: "/images/dave.jpg" },
   // { name: "Eva", message: "Incredible quality and support!", image: "/images/eva.jpg" },
