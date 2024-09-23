@@ -7,9 +7,9 @@ function Joinus() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-auto mt-4 max-w-[90%] lg:max-w-3xl">
           Join hundreds of millions of users and try Counsel today.
         </h2>
-        <Button className="mt-4 px-6 py-2 text-lg md:text-xl">Start Now</Button>
+        <Button className="mt-2">Start Now</Button>
       </div>
-    </section> 
+    </section>
   );
 }
 

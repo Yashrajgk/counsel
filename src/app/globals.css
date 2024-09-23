@@ -7,4 +7,10 @@
   --foreground: #09090b;
 }
 
+@layer utilities{
+  .paused{
+    animation-play-state: paused;
+  }
+}
+
 

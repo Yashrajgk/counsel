@@ -3,44 +3,55 @@
 function Animation() {
   // Define your items to display
   const items = [
-    { text: "Learn about the Roman Empire " },
-    { text: "Write a text inviting my neighbors to a barbecue " },
-    { text: "Give me ideas for what to do with my kids’ art " },
-    { text: "Help me study vocabulary for a college entrance exam " },
-    { text: "Help me pick an outfit that will look good on camera " },
-    { text: "Write an email to request a quote from local plumbers " },
-    { text: "Create a charter to start a film club " },
-    { text: "Write a Python script to automate daily email reports " },
+      "Learn about the Roman Empire " ,
+      "Write  inviting my neighbors to a barbecue " ,
+      "Give me ideas for what to do with my kids’ art " ,
+      "Help me study vocabulary for a college entrance exam " ,
+      "Help me pick an outfit that will look good on camera " ,
+      "Write an email to request a quote from local plumbers " ,
+      "Create a charter to start a film club " ,
+      "Write a Python script to automate daily email reports " ,
+    
   ];
 
   // Duplicate items for infinite scrolling effect
   const extendedItems = [...items, ...items];
 
   return (
-    <section className="overflow-hidden relative">
+    <section className="overflow-hidden relative group">
       {/* First row: Right to left */}
-      <div className="flex animate-scroll-left whitespace-nowrap mt-4"> 
+      <div className="flex animate-scroll-left whitespace-nowrap mt-4 group-hover:paused">
         {extendedItems.map((item, index) => (
-          <div key={index} className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2">
-            {item.text}
+          <div
+            key={index}
+            className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2"
+          >
+            {item}
           </div>
         ))}
       </div>
 
-      {/* Second row: Left to right with infinite scrolling */}
-      <div className="flex animate-scroll-right whitespace-nowrap mt-4">
+      {/* Second row: Left to right */}
+      <div className="flex animate-scroll-right whitespace-nowrap mt-4 group-hover:paused" aria-hidden="true">
         {extendedItems.map((item, index) => (
-          <div key={index} className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2">
-            {item.text}
+          <div
+            key={index}
+            className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2"
+          >
+            {item}
           </div>
+          
         ))}
       </div>
 
       {/* Third row: Right to left */}
-      <div className="flex animate-scroll-left whitespace-nowrap mt-4 mb-8">
+      <div className="flex animate-scroll-left whitespace-nowrap mt-4 mb-8 group-hover:paused">
         {extendedItems.map((item, index) => (
-          <div key={index} className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2">
-            {item.text}
+          <div
+            key={index}
+            className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2"
+          >
+            {item}
           </div>
         ))}
       </div>
@@ -49,7 +60,7 @@ function Animation() {
       <style jsx>{`
         @keyframes scroll-left {
           0% {
-            transform: translateX(0);
+            transform: translateX(0%);
           }
           100% {
             transform: translateX(-100%);
@@ -57,17 +68,18 @@ function Animation() {
         }
         @keyframes scroll-right {
           0% {
-            transform: translateX(0);
+            transform: translateX(-100%);
           }
           100% {
-            transform: translateX(100%);
+            transform: translateX(0%);
           }
         }
         .animate-scroll-left {
           animation: scroll-left 30s linear infinite;
         }
         .animate-scroll-right {
-          animation: scroll-right 30s linear infinite;
+          animation: slide 30s linear infinite;
+          display: flex;
         }
 
         /* Responsive styles */
