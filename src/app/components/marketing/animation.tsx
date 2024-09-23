@@ -19,7 +19,7 @@ function Animation() {
   return (
     <section className="overflow-hidden relative">
       {/* First row: Right to left */}
-      <div className="flex animate-scroll-left whitespace-nowrap mt-4">
+      <div className="flex animate-scroll-left whitespace-nowrap mt-4"> 
         {extendedItems.map((item, index) => (
           <div key={index} className="bg-[#f7f7f7] p-4 rounded-md hover:bg-[#d6d3d1] cursor-pointer mx-2">
             {item.text}

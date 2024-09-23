@@ -9,7 +9,7 @@ function Joinus() {
         </h2>
         <Button className="mt-4 px-6 py-2 text-lg md:text-xl">Start Now</Button>
       </div>
-    </section>
+    </section> 
   );
 }
 

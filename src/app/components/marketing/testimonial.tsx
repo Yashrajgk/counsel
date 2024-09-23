@@ -52,7 +52,7 @@ const Home = () => {
           }
         }
         .animate-slide {
-          animation: slide 75s linear infinite; /* Default speed */
+          animation: slide 75s linear infinite; /* Default speed */ 
         }
 
         /* Responsive animation speeds */
